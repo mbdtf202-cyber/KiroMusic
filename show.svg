@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0" />
+    </marker>
+    <style>
+      .box { fill: #ffffff; stroke: #2b6cb0; stroke-width:2; rx:10; }
+      .title { font: 700 20px 'Arial'; fill: #0b2545; }
+      .label { font: 600 14px 'Arial'; fill: #073b4c; }
+      .sub { font: 400 12px 'Arial'; fill: #0b2545; }
+      .cloud { fill: #f0f6ff; stroke: #85b7ff; stroke-width:2; rx:14; }
+      .note { font: 400 11px 'Arial'; fill: #1f2937; }
+      .arrow { stroke: #2b6cb0; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <!-- Header -->
+  <rect x="20" y="14" width="1360" height="62" class="cloud"/>
+  <text x="40" y="52" class="title">KiroMusic — System Architecture (Ethereum + Kiro IDE)</text>
+
+  <!-- Kiro IDE Cloud -->
+  <rect x="40" y="100" width="380" height="140" class="box" />
+  <text x="60" y="132" class="label">Kiro IDE (Central Dev Engine)</text>
+  <text x="60" y="156" class="sub">• Spec-driven contract generation</text>
+  <text x="60" y="176" class="sub">• AI agents: metadata, tests, SDK</text>
+  <text x="60" y="196" class="sub">• TS SDK & hooks auto-generation</text>
+
+  <!-- AI Metadata Engine -->
+  <rect x="460" y="100" width="420" height="140" class="box" />
+  <text x="480" y="132" class="label">AI Metadata Engine</text>
+  <text x="480" y="156" class="sub">• Audio fingerprinting</text>
+  <text x="480" y="176" class="sub">• Embeddings & plagiarism checks</text>
+  <text x="480" y="196" class="sub">• PRY (Predicted Royalty Yield)</text>
+
+  <!-- Frontend -->
+  <rect x="920" y="100" width="440" height="140" class="box" />
+  <text x="940" y="132" class="label">Frontend DApp (React + TypeScript)</text>
+  <text x="940" y="156" class="sub">• Next.js / React + TS</text>
+  <text x="940" y="176" class="sub">• Wagmi / Viem + generated hooks</text>
+  <text x="940" y="196" class="sub">• Artist / Investor / DAO UI</text>
+
+  <!-- Arrows from Kiro to AI and Frontend -->
+  <path d="M420 170 L460 170" class="arrow" />
+  <path d="M880 170 L920 170" class="arrow" />
+
+  <!-- Ethereum Core block -->
+  <rect x="160" y="280" width="1080" height="360" class="cloud" />
+  <text x="180" y="312" class="label">Ethereum (L1) — Smart Contract Layer</text>
+
+  <!-- Contracts boxes inside Ethereum area -->
+  <rect x="200" y="340" width="300" height="120" class="box" />
+  <text x="220" y="372" class="label">MusicNFT (ERC-721)</text>
+  <text x="220" y="396" class="sub">• Encrypted metadata pointer (IPFS)</text>
+  <text x="220" y="416" class="sub">• Legal hash & provenance</text>
+
+  <rect x="540" y="340" width="300" height="120" class="box" />
+  <text x="560" y="372" class="label">rMUSIC (RWA ERC-20)</text>
+  <text x="560" y="396" class="sub">• Fractionalized royalty shares</text>
+  <text x="560" y="416" class="sub">• Tradable & stakeable</text>
+
+  <rect x="880" y="340" width="300" height="120" class="box" />
+  <text x="900" y="372" class="label">RoyaltyVault</text>
+  <text x="900" y="396" class="sub">• Collects & distributes royalties</text>
+  <text x="900" y="416" class="sub">• Revenue-backed loans & pools</text>
+
+  <!-- DeFi/AMM -->
+  <rect x="200" y="480" width="320" height="120" class="box" />
+  <text x="220" y="512" class="label">DeFi Primitives</text>
+  <text x="220" y="536" class="sub">• AMM / Liquidity Pools</text>
+  <text x="220" y="556" class="sub">• Yield vaults & staking</text>
+
+  <!-- DAO -->
+  <rect x="560" y="480" width="300" height="120" class="box" />
+  <text x="580" y="512" class="label">KiroDAO</text>
+  <text x="580" y="536" class="sub">• Governor + Timelock</text>
+  <text x="580" y="556" class="sub">• Snapshot + Safe multisig</text>
+
+  <!-- ZK Privacy -->
+  <rect x="900" y="480" width="320" height="120" class="box" />
+  <text x="920" y="512" class="label">ZK Privacy Layer</text>
+  <text x="920" y="536" class="sub">• Noir / zkSNARK proofs</text>
+  <text x="920" y="556" class="sub">• Lit Protocol gating</text>
+
+  <!-- Arrows: AI -> MusicNFT / RoyaltyVault -->
+  <path d="M640 170 L640 280" class="arrow" />
+  <path d="M640 280 L360 340" class="arrow" />
+  <path d="M640 280 L820 340" class="arrow" />
+
+  <!-- Arrows: Frontend -> Contracts -->
+  <path d="M1000 240 L1000 340" class="arrow" />
+  <path d="M1000 340 L740 340" class="arrow" />
+
+  <!-- Oracles / Indexers -->
+  <rect x="40" y="660" width="420" height="160" class="box" />
+  <text x="60" y="694" class="label">Oracles & Indexers</text>
+  <text x="60" y="718" class="sub">• Chainlink / Signed receipts</text>
+  <text x="60" y="738" class="sub">• The Graph subgraph</text>
+
+  <!-- Storage -->
+  <rect x="500" y="660" width="420" height="160" class="box" />
+  <text x="520" y="694" class="label">Storage & Encryption</text>
+  <text x="520" y="718" class="sub">• IPFS / Arweave (encrypted files)</text>
+  <text x="520" y="738" class="sub">• Lit Protocol key gating</text>
+
+  <!-- Kiro IDE to Oracles/Storage arrows -->
+  <path d="M420 180 L140 680" class="arrow" />
+  <path d="M520 240 L680 680" class="arrow" />
+
+  <!-- Footer notes -->
+  <text x="40" y="840" class="note">Generated for KiroMusic — architecture SVG. Developed & demonstrated using Kiro IDE (AI agent workflows), Ethereum L1 (L2-ready), React + TypeScript frontend, ZK privacy, and RWA DeFi primitives.</text>
+
+</svg>
