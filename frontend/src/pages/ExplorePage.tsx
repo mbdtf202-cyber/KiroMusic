@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Filter, TrendingUp, Clock, Music } from 'lucide-react';
+import { Search, TrendingUp, Clock, Music } from 'lucide-react';
 
 export default function ExplorePage() {
   const [searchTerm, setSearchTerm] = useState('');

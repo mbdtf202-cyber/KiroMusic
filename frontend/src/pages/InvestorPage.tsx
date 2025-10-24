@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, DollarSign, Music, Lock } from 'lucide-react';
+import { TrendingUp, DollarSign, Music } from 'lucide-react';
 
 interface MusicAsset {
   id: number;

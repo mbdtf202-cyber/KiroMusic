@@ -4,7 +4,7 @@ import { Upload, Music, FileText, Sparkles, CheckCircle } from 'lucide-react';
 import { useAccount } from 'wagmi';
 
 export default function ArtistPage() {
-  const { address, isConnected } = useAccount();
+  const { isConnected } = useAccount();
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     trackName: '',

@@ -14,7 +14,7 @@ interface Proposal {
 }
 
 export default function DAOPage() {
-  const [selectedProposal, setSelectedProposal] = useState<Proposal | null>(null);
+  const [, setSelectedProposal] = useState<Proposal | null>(null);
 
   const proposals: Proposal[] = [
     {
