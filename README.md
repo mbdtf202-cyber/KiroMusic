@@ -1,363 +1,246 @@
-🎵 KiroMusic — Decentralized AI-Powered Music Copyright Protocol (Built 100% in Kiro IDE)
+# 🎵 KiroMusic — Decentralized AI-Powered Music Copyright Protocol
+
+**Built 100% in Kiro IDE**
 
 **🌐 Live Demo**: https://kiromusic-9x788p0gb-mbdtf202-cybers-projects.vercel.app
 
-⚠️ **如果看到空白页面**: 查看 [BLANK_PAGE_SOLUTION.md](./BLANK_PAGE_SOLUTION.md)
+⚠️ **If you see a blank page**: Check [BLANK_PAGE_SOLUTION.md](./docs/troubleshooting/BLANK_PAGE_SOLUTION.md)
+
+---
+
+## 🌟 Overview
 
 KiroMusic turns music copyrights into privacy-preserving, yield-bearing on-chain Real World Assets (RWA).
-Artists mint music NFTs, fractionalize royalties into ERC-20 RWA tokens, investors provide liquidity/loans, and the community governs via DAO — with AI metadata & privacy proofs driven by Kiro IDE agents.
-Frontend: React + TypeScript (strict TS), smart contracts: Solidity on Ethereum.
+
+- **Artists** mint music NFTs and fractionalize royalties into ERC-20 RWA tokens
+- **Investors** provide liquidity/loans and earn from royalty streams
+- **Community** governs via DAO with AI-powered metadata & privacy proofs
+- **Technology** React + TypeScript frontend, Solidity smart contracts on Base
+
+---
 
 ## 🚀 Quick Links
 
 - **🌐 Live App**: [kiromusic.vercel.app](https://kiromusic-9x788p0gb-mbdtf202-cybers-projects.vercel.app)
-- **� DGitHub**: [github.com/mbdtf202-cyber/KiroMusic](https://github.com/mbdtf202-cyber/KiroMusic)
-- **📚 Documentation**: [DOCS_INDEX.md](./DOCS_INDEX.md) - 完整文档索引
+- **💻 GitHub**: [github.com/mbdtf202-cyber/KiroMusic](https://github.com/mbdtf202-cyber/KiroMusic)
+- **📚 Documentation**: [DOCS_INDEX.md](./DOCS_INDEX.md)
 - **⚡ Quick Start**: [3-Step Setup](./docs/deployment/QUICK_START.md) ⭐
-- **🔧 Troubleshooting**: [Fix Common Issues](./docs/troubleshooting/)
+- **🔧 Troubleshooting**: [Common Issues](./docs/troubleshooting/)
 - **🎯 Next Steps**: [NEXT_STEPS.md](./NEXT_STEPS.md)
 
-## ⚡ Quick Start (2 Steps - 15 Minutes)
+---
 
-### 🎯 完整实现和部署
+## ⚡ Quick Start (15 Minutes)
+
+### Prerequisites
+
+1. **MetaMask Private Key** - Export from MetaMask wallet
+2. **Test ETH** - Get free from [Base Sepolia Faucet](https://www.coinbase.com/faucets/base-ethereum-sepolia-faucet)
+
+### Deploy in 2 Steps
 
 ```bash
-# 1. 配置环境 (5分钟)
+# 1. Configure environment (5 minutes)
 ./setup-env.sh
 
-# 2. 一键部署所有功能 (10分钟)
+# 2. Deploy everything (10 minutes)
 ./complete-setup.sh
 ```
 
-**就这么简单！** 🎉
+**That's it!** 🎉
 
-📖 **详细指南**: [START_DEPLOYMENT.md](./START_DEPLOYMENT.md)
+📖 **Detailed Guide**: [START_DEPLOYMENT.md](./START_DEPLOYMENT.md)
 
-### 需要准备
+### What You'll Get
 
-1. **MetaMask私钥** - 从MetaMask导出
-2. **测试ETH** - 从[Base Sepolia水龙头](https://www.coinbase.com/faucets/base-ethereum-sepolia-faucet)获取
+- ✅ Smart contracts deployed on Base Sepolia testnet
+- ✅ Complete Web3 frontend application
+- ✅ All features working (NFT minting, fractionalization, royalties, DAO)
 
-### 完成后你将拥有
+---
 
-- ✅ 部署在Base Sepolia的智能合约
-- ✅ 完整的Web3前端应用
-- ✅ 所有功能可用（NFT铸造、碎片化、版税、DAO）
+## 🎯 One-Line Elevator
 
-🚀 One-line elevator
+**KiroMusic** — Artists keep control. Fans co-own and earn. Governance is community-driven. Development and AI automation powered entirely by Kiro IDE.
 
-KiroMusic — Artists keep control. Fans co-own and earn. Governance is community-driven. Development and AI automation powered entirely by Kiro IDE.
+---
 
-📌 Key Highlights
+## 📌 Key Highlights
 
-Network: Ethereum L1 (mainnet-ready; L2-compatible design)
+- **Network**: Base L2 (Ethereum-compatible, low gas fees)
+- **Dev Environment**: 100% Kiro IDE — spec-driven smart contract generation, AI-assisted tests, auto-generated TypeScript SDK/hooks
+- **Frontend**: React + TypeScript + Vite + Wagmi/Viem for wallet interactions
+- **Privacy**: ZK proofs + Lit Protocol for encrypted metadata gating
+- **DeFi Primitives**: RoyaltyVault, fractional RWA tokens (rMUSIC), liquidity pools
+- **AI Features**: Audio fingerprinting, metadata embedding, investment recommendations
+- **DAO**: KRM governance token + on-chain proposals + Safe multisig
 
-Dev environment: Only Kiro IDE — spec-driven smart contract generation, AI-assisted tests, auto-generated TypeScript SDK/hooks, deployment automation.
+---
 
-Frontend: React + TypeScript + Next.js (or React App with strict TS) + Wagmi/Viem for wallet interactions.
+## 🧩 What Does KiroMusic Do?
 
-Privacy: zk proofs (Noir / zk framework of choice) + Lit Protocol for encrypted metadata gating.
+1. **Artist uploads track** → Kiro Agent extracts fingerprint & metadata → music file stored (IPFS/Arweave) with encrypted metadata
+2. **Mint MusicNFT** (ERC-721) as proof of copyright
+3. **Fractionalize NFT** → rMUSIC (ERC-20) representing revenue shares
+4. **RoyaltyVault** collects off-chain royalties via oracles, distributes to rMUSIC holders
+5. **DeFi features**: Trade rMUSIC in AMM, stake for yield, borrow against future royalties
+6. **KiroDAO** governs platform parameters, on-chain proposals, funding & dispute resolution
 
-DeFi primitives: RoyaltyVault, fractional RWA tokens (rMUSIC), liquidity pools, revenue-backed lending.
+Everything coded, tested & deployed using Kiro IDE.
 
-AI: Kiro Agent flows for audio fingerprinting, metadata embedding, contract template generation, and security checks.
+---
 
-DAO: KRM governance token + Governor + Snapshot + Safe multisig.
+## 🔭 System Architecture
 
-🧩 What does KiroMusic do?
-
-Artist uploads track → Kiro Agent extracts fingerprint & metadata → music file stored (IPFS/Arweave) with encrypted metadata.
-
-Mint MusicNFT (ERC-721) as proof of copyright.
-
-Fractionalize NFT → rMUSIC (ERC-20) representing revenue shares.
-
-RoyaltyVault collects off-chain royalties via oracles, distributes to rMUSIC holders (ZK proofs optional).
-
-DeFi features: trade rMUSIC in AMM, stake for yield, borrow against future royalties.
-
-KiroDAO governs platform parameters, on-chain proposals, funding & dispute resolution.
-
-Everything coded, tested & deployed using Kiro IDE — demos recorded inside Kiro.
-
-🔭 System Architecture (brief)
+```
 [Frontend DApp (React + TypeScript)]
          ↕ (Wagmi/Viem + ethers)
 [Wallets: MetaMask / WalletConnect]
          ↕
-[Smart Contracts on Ethereum L1]
+[Smart Contracts on Base L2]
   - MusicNFT (ERC-721)
   - rMUSIC (ERC-20 / RWA)
-  - RoyaltyVault (revenue accounting & distribution)
-  - RWAStakePool, RevenueLending
-  - KiroDAO (Governor + Timelock)
+  - RoyaltyVault
+  - Fractionalizer
+  - KiroDAO
          ↕
-[Oracles / Indexers]
-  - Chainlink / Signed Off-chain Reports
-  - The Graph subgraph
-         ↕
-[Storage & Privacy]
-  - IPFS/Arweave (encrypted files)
-  - Lit Protocol (key gating)
-  - ZK layer (Noir / zk verifier contracts)
-         ↕
-[Kiro IDE]
-  - AI agents: contract templates, tests, TS SDK, deployment scripts, metadata pipeline
-
-🧱 Frontend (strictly React + TypeScript)
-
-Tech choices & rationale
-
-React + TypeScript (strict mode) — type-safe UI, better DX, fewer runtime bugs, ideal for complex dApp flows.
-
-Next.js (recommended) for SSR/SSG optionality, file-based routes, and easy deployment; or plain React + Vite if you prefer minimal build. Either way, all code generated & managed via Kiro IDE.
-
-Wagmi + Viem for wallet/connect + typed contract interactions (works natively with TypeScript).
-
-TailwindCSS + shadcn/UI (optional) for rapid polished UI.
-
-Generated TypeScript SDK/hooks: Kiro generates contract ABIs + typed hooks (useContract, useContractWrite, useContractRead) so frontend dev is mostly wiring/screen design.
-
-Suggested folder structure
-
-frontend/
- ├─ src/
- │   ├─ pages/ (or routes/)
- │   ├─ components/
- │   ├─ hooks/       <- Kiro-generated typed hooks
- │   ├─ services/    <- API adapters (oracles, indexer)
- │   └─ types/       <- generated TS types for contracts & metadata
- ├─ package.json
- ├─ tsconfig.json (strict)
- └─ tailwind.config.js
-
-
-Key UI flows
-
-Artist onboarding: upload -> metadata preview -> mint -> fractionalize
-
-Investor dashboard: browse assets -> buy rMUSIC -> stake -> view yield history
-
-Royalty dashboard: proof of income (ZK) & payouts (encrypted receipts)
-
-DAO panel: propose, vote, execute (with gasless UX options via relayer/Gnosis)
-
-🔒 Privacy & ZK design (summary)
-
-Encrypted metadata: media stored on IPFS/Arweave; symmetric key encrypted and gated via Lit Protocol using NFT ownership.
-
-ZK proofs: use Noir / chosen ZK tool to produce proofs (e.g., “I received X royalties in period P”) and verify on-chain with a verifier contract. This lets holders verify fair distribution without revealing others' revenue.
-
-MPC for voting (optional): anonymous verifiable votes where necessary.
-
-🛠 Smart Contracts (core)
-
-MusicNFT.sol — ERC-721 with encrypted metadata pointer & legal hash
-
-Fractionalizer.sol — fractionalize NFT → rMUSIC ERC-20 shares
-
-RoyaltyVault.sol — collects, accounts, and distributes royalty inflows
-
-RWAStakePool.sol — liquidity + auto-yield compounding for holders
-
-RevenueLending.sol — revenue-backed loans with discounting & liquidation logic
-
-KiroDAO.sol — Governor pattern + Timelock + emergency multisig interactions
-
-ZKVerifier.sol — verifies zk proofs for private accounting
-
-All contracts authored & iteratively improved inside Kiro IDE; Kiro agents run tests (unit/integration), run static analysis, suggest gas optimizations and produce the TypeScript bindings used in frontend.
-
-🔗 Oracles & Indexing
-
-Income feed: Chainlink External Adapter or signed receipts from rights managers → RoyaltyVault triggers distribution.
-
-Analytics: The Graph subgraph to provide on-page historical yields, ownership snapshots, and event indexing.
-
-🧠 AI integration (100% via Kiro Agent workflows)
-
-Audio fingerprinting & metadata embeddings: Kiro agent calls audio embedding endpoints (or built-in Kiro embeddings), creates canonical track fingerprints.
-
-Contract generation: Kiro auto-generates contract skeletons from spec: kiro generate MusicNFT spec.yaml → solidity + tests + TS bindings.
-
-Security & gas optimization: agent runs static analysis suggestions, creates minimal fixes and explains changes (useful for demo).
-
-Demo workflow: record Kiro session showing generate -> test -> deploy -> frontend hooks generated — required for hackathon submission.
-
-💰 Tokenomics (example)
-
-KRM (KiroMusic Token) — ERC-20: governance, platform fee discounts, staking rewards
-
-rMUSIC — ERC-20: fractional royalty shares per music asset
-
-MusicNFT (MNFT) — ERC-721: canonical ownership record
-
-Fees & splits (example)
-
-Royalty stream: incoming revenue → 95% to rMUSIC holders (pro rata) + 2% platform fee → DAO treasury + 3% reserve/insurance.
-
-🛠 Development Workflow (Kiro-only)
-
-Why Kiro-only: 你将全程在 Kiro IDE 中写 spec、生成合约、编写测试、生成 TypeScript bindings、并构建 React + TypeScript 前端（Kiro 会生成 hooks/SDK），最后一键部署到 Ethereum 测试网 / mainnet（凭你权限）。
-
-Example Kiro session (illustrative commands):
-
-# create project
-kiro init kiromusic --template=web3-rwa
-
-# add modules
-kiro add contract MusicNFT --template=erc721-metadata --spec=music.spec.yaml
-kiro add contract Fractionalizer --link=MusicNFT --spec=fraction.spec.yaml
-kiro add contract RoyaltyVault --spec=royalty.spec.yaml
-kiro add contract KiroDAO --spec=dao.spec.yaml
-
-# generate TS SDK + hooks
-kiro generate sdk --lang=typescript --target=frontend/src/hooks
-
-# run unit tests (Kiro runs hardhat/forge under the hood)
-kiro test
-
-# deploy to goerli (or provided network)
-kiro deploy --network=sepolia
-
-# build frontend (kiro can run this as a step)
-kiro run frontend:build
-
-
-在黑客松录屏演示中，请务必展示 Kiro 的 agent 输出（生成合约、测试执行、类型化 SDK 的一系列截图/录像），这会是评审重要的“工具使用证明”。
-
-✅ Hackathon Submission Checklist (KiroMusic)
-
- GitHub repo with code & docs (root README + docs/whitepaper.md)
-
- Demo video (3–6 min) — 包含 Kiro IDE 使用流程 (生成、测试、部署、前端演示)
-
- Screenshots: Kiro contract generation, Kiro test output, Kiro SDK generation, deployment logs (timestamped)
-
- Deployed contract addresses (Sepolia / Goerli / Ethereum testnet)
-
- Architecture diagram & tokenomics sheet
-
- Short write-up: how privacy works (ZK flow) + how royalties are ingested (oracle design)
-
-✅ Security & Compliance Notes
-
-KYC / legal checks before tokenizing real-world copyrights. Store signed off-chain agreements; anchor hash on-chain.
-
-Audits: run static analyzers (Kiro suggests changes) + third-party audit before mainnet launch.
-
-Oracle trust: prefer signed multi-party receipts and multi-source oracles to minimize single-point data attacks.
-
-Timelock & multisig: DAO treasury & upgrade paths protected by timelock + Safe multisig.
-
-📅 Roadmap (concise)
-
-Nov 2025 — Core contracts + React+TypeScript frontend prototype (Kiro-only dev)
-
-Dec 2025 — ZK privacy POC + oracle integration + DAO alpha
-
-Q1 2026 — Security audit, pilot with 5 artists, cross-list rMUSIC on DEX
-
-Q2 2026 — Mainnet launch + SDK release
-
-📂 Repo & Files (suggested)
-/README.md
-/docs/
-  └─ whitepaper.md
-/contracts/
-  ├─ MusicNFT.sol
-  ├─ Fractionalizer.sol
-  └─ RoyaltyVault.sol
-/frontend/
-  ├─ package.json
-  ├─ tsconfig.json
-  └─ src/
-      ├─ pages/
-      ├─ components/
-      └─ hooks/   <-- Kiro generated TS hooks
-/tests/         <-- Kiro generated tests
-/kiro/          <-- Kiro specs & agent configs
+[Oracles & Off-chain Services]
+  - Chainlink (price feeds, royalty data)
+  - IPFS/Arweave (metadata storage)
+  - AI Services (fingerprinting, recommendations)
+```
 
 ---
 
+## 🎨 Core Features
+
+### For Artists
+
+- **Mint Music NFTs** - Tokenize your music copyrights
+- **Fractionalize Royalties** - Convert NFTs into tradeable tokens
+- **Automated Royalty Distribution** - Receive payments automatically
+- **Copyright Protection** - AI-powered audio fingerprinting
+
+### For Investors
+
+- **Buy Fractional Shares** - Invest in music royalties
+- **Earn Passive Income** - Receive royalty distributions
+- **Trade on DEX** - Liquid secondary market
+- **AI Recommendations** - Data-driven investment insights
+
+### For Community
+
+- **DAO Governance** - Vote on platform decisions
+- **Proposal System** - Submit and vote on proposals
+- **Treasury Management** - Community-controlled funds
+- **Dispute Resolution** - Decentralized arbitration
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Framework**: React 18 + TypeScript
+- **Styling**: Tailwind CSS
+- **Web3**: Wagmi v2 + Viem
+- **Build**: Vite
+- **Deployment**: Vercel
+
+### Backend
+- **Runtime**: Node.js
+- **Framework**: Express
+- **AI**: OpenAI API
+- **Deployment**: Railway / Render
+
+### Smart Contracts
+- **Language**: Solidity 0.8.20
+- **Framework**: Hardhat
+- **Network**: Base (Sepolia testnet / Mainnet)
+- **Standards**: ERC-721, ERC-20
+
+### Development
+- **IDE**: Kiro IDE (100% of development)
+- **Testing**: Jest, Hardhat
+- **CI/CD**: Vercel auto-deploy
+- **Version Control**: Git + GitHub
+
+---
+
+## 📂 Project Structure
+
+```
+KiroMusic/
+├── contracts/              # Smart contracts
+│   ├── MusicNFT.sol
+│   ├── RoyaltyVault.sol
+│   ├── Fractionalizer.sol
+│   └── KiroDAO.sol
+├── frontend/               # React frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── hooks/
+│   │   └── services/
+│   └── package.json
+├── backend/                # Node.js backend
+│   ├── src/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   └── ai/
+│   └── package.json
+├── scripts/                # Deployment scripts
+│   ├── deploy-contracts.js
+│   └── test-deployment.js
+├── test/                   # Contract tests
+├── docs/                   # Documentation
+│   ├── deployment/
+│   ├── troubleshooting/
+│   └── archive/
+└── README.md
+```
+
+---
 
 ## 🚀 Deployment
 
-### Quick Start (5 minutes)
+### Current Status
+
+- ✅ **Frontend**: Deployed on Vercel
+- ✅ **Documentation**: Organized and complete
+- ✅ **Deployment Tools**: Ready to use
+- ⏳ **Smart Contracts**: Ready to deploy
+- ⏳ **Backend**: Ready to deploy
+
+### Deploy Now
 
 ```bash
-# 1. One-command deployment
-./deploy-all.sh
+# Quick deployment
+./complete-setup.sh
 
-# 2. Or deploy step by step
+# Or step by step
+./setup-env.sh              # Configure environment
+npx hardhat compile         # Compile contracts
 npx hardhat run scripts/deploy-contracts.js --network base-sepolia
-cd backend && railway up
 cd frontend && vercel --prod
 ```
 
-### Deployment Resources
+See [COMPLETE_DEPLOYMENT_GUIDE.md](./docs/deployment/COMPLETE_DEPLOYMENT_GUIDE.md) for details.
 
-| Resource | Description | Link |
-|----------|-------------|------|
-| 🎯 Quick Deploy | 5-minute setup guide | [QUICK_DEPLOY.md](./QUICK_DEPLOY.md) |
-| 📖 Complete Guide | Detailed deployment instructions | [COMPLETE_DEPLOYMENT_GUIDE.md](./COMPLETE_DEPLOYMENT_GUIDE.md) |
-| 📊 Dashboard | Track deployment status | [DEPLOYMENT_DASHBOARD.md](./DEPLOYMENT_DASHBOARD.md) |
-| ✅ Completion | Final checklist | [DEPLOYMENT_COMPLETE.md](./DEPLOYMENT_COMPLETE.md) |
+---
 
-### Deployment Scripts
+## 📖 Documentation
 
-```bash
-# Deploy smart contracts
-npx hardhat run scripts/deploy-contracts.js --network base-sepolia
+- **[DOCS_INDEX.md](./DOCS_INDEX.md)** - Complete documentation index
+- **[QUICK_START.md](./docs/deployment/QUICK_START.md)** - 3-step quick start
+- **[FEATURES.md](./FEATURES.md)** - Feature list
+- **[INSTALL.md](./INSTALL.md)** - Installation guide
+- **[USAGE_GUIDE.md](./USAGE_GUIDE.md)** - User guide
+- **[DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md)** - Developer guide
+- **[ARCHITECTURE.md](./docs/ARCHITECTURE.md)** - System architecture
 
-# Configure Vercel environment variables
-./scripts/setup-vercel-env.sh
+---
 
-# Run deployment tests
-node scripts/test-deployment.js
-```
-
-### Current Deployment Status
-
-- ✅ **Frontend**: Deployed on Vercel
-  - URL: https://kiromusic-eskbl55m8-mbdtf202-cybers-projects.vercel.app
-  - Status: Live
-  - Build: 949KB (gzip: 294KB)
-
-- ⏳ **Backend**: Ready to deploy
-  - Platforms: Railway / Render / Vercel
-  - Config files: `backend/railway.json`, `backend/render.yaml`
-
-- ⏳ **Smart Contracts**: Ready to deploy
-  - Networks: Base Sepolia (testnet) / Base (mainnet)
-  - Scripts: `scripts/deploy-contracts.js`
-
-### Environment Variables
-
-**Frontend (Vercel)**
-```env
-VITE_API_URL=https://your-backend-url.railway.app/api
-VITE_CHAIN_ID=84532
-VITE_NETWORK_NAME=base-sepolia
-VITE_IPFS_GATEWAY=https://gateway.pinata.cloud/ipfs/
-```
-
-**Backend (Railway/Render)**
-```env
-NODE_ENV=production
-PORT=3001
-OPENAI_API_KEY=your_key
-CORS_ORIGIN=https://kiromusic-eskbl55m8-mbdtf202-cybers-projects.vercel.app
-```
-
-**Smart Contracts (Local)**
-```env
-PRIVATE_KEY=your_private_key
-BASE_SEPOLIA_RPC_URL=https://sepolia.base.org
-BASESCAN_API_KEY=your_api_key
-```
-
-### Testing
+## 🧪 Testing
 
 ```bash
 # Run all tests
@@ -372,13 +255,51 @@ node scripts/test-deployment.js
 
 ---
 
-## 📞 Support & Resources
+## 🤝 Contributing
 
-- **Documentation**: See `/docs` folder
-- **Deployment Help**: [COMPLETE_DEPLOYMENT_GUIDE.md](./COMPLETE_DEPLOYMENT_GUIDE.md)
-- **Troubleshooting**: Check deployment guide's troubleshooting section
-- **Base Sepolia Faucet**: https://www.coinbase.com/faucets/base-ethereum-sepolia-faucet
+We welcome contributions! Please see our contributing guidelines.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Kiro IDE** - 100% of development done in Kiro IDE
+- **Base** - L2 blockchain platform
+- **OpenZeppelin** - Smart contract libraries
+- **Wagmi** - React hooks for Ethereum
+- **Vercel** - Frontend hosting
+
+---
+
+## 📞 Contact & Links
+
+- **Website**: https://kiromusic-9x788p0gb-mbdtf202-cybers-projects.vercel.app
+- **GitHub**: https://github.com/mbdtf202-cyber/KiroMusic
+- **Documentation**: [DOCS_INDEX.md](./DOCS_INDEX.md)
+
+---
+
+## 🎯 Roadmap
+
+- **Q4 2024** - Core contracts + React+TypeScript frontend prototype
+- **Q1 2025** - ZK privacy POC + oracle integration + DAO alpha
+- **Q2 2025** - Security audit, pilot with artists, DEX listing
+- **Q3 2025** - Mainnet launch + SDK release
 
 ---
 
 **Built with ❤️ using Kiro IDE**
+
+**Start building the future of music copyright!** 🚀
