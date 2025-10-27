@@ -1,8 +1,47 @@
 🎵 KiroMusic — Decentralized AI-Powered Music Copyright Protocol (Built 100% in Kiro IDE)
 
+**🌐 Live Demo**: https://kiromusic-9x788p0gb-mbdtf202-cybers-projects.vercel.app
+
+⚠️ **如果看到空白页面**: 查看 [BLANK_PAGE_SOLUTION.md](./BLANK_PAGE_SOLUTION.md)
+
 KiroMusic turns music copyrights into privacy-preserving, yield-bearing on-chain Real World Assets (RWA).
 Artists mint music NFTs, fractionalize royalties into ERC-20 RWA tokens, investors provide liquidity/loans, and the community governs via DAO — with AI metadata & privacy proofs driven by Kiro IDE agents.
 Frontend: React + TypeScript (strict TS), smart contracts: Solidity on Ethereum.
+
+## 🚀 Quick Links
+
+- **Live App**: [kiromusic.vercel.app](https://kiromusic-9x788p0gb-mbdtf202-cybers-projects.vercel.app)
+- **📚 Documentation**: [DOCS_INDEX.md](./DOCS_INDEX.md) - 完整文档索引
+- **Quick Start**: [3-Step Setup](./docs/deployment/QUICK_START.md) ⭐
+- **Troubleshooting**: [Fix Common Issues](./docs/troubleshooting/)
+- **Next Steps**: [NEXT_STEPS.md](./NEXT_STEPS.md)
+
+## ⚡ Quick Start (2 Steps - 15 Minutes)
+
+### 🎯 完整实现和部署
+
+```bash
+# 1. 配置环境 (5分钟)
+./setup-env.sh
+
+# 2. 一键部署所有功能 (10分钟)
+./complete-setup.sh
+```
+
+**就这么简单！** 🎉
+
+📖 **详细指南**: [START_DEPLOYMENT.md](./START_DEPLOYMENT.md)
+
+### 需要准备
+
+1. **MetaMask私钥** - 从MetaMask导出
+2. **测试ETH** - 从[Base Sepolia水龙头](https://www.coinbase.com/faucets/base-ethereum-sepolia-faucet)获取
+
+### 完成后你将拥有
+
+- ✅ 部署在Base Sepolia的智能合约
+- ✅ 完整的Web3前端应用
+- ✅ 所有功能可用（NFT铸造、碎片化、版税、DAO）
 
 🚀 One-line elevator
 
@@ -237,3 +276,108 @@ Q2 2026 — Mainnet launch + SDK release
       └─ hooks/   <-- Kiro generated TS hooks
 /tests/         <-- Kiro generated tests
 /kiro/          <-- Kiro specs & agent configs
+
+---
+
+
+## 🚀 Deployment
+
+### Quick Start (5 minutes)
+
+```bash
+# 1. One-command deployment
+./deploy-all.sh
+
+# 2. Or deploy step by step
+npx hardhat run scripts/deploy-contracts.js --network base-sepolia
+cd backend && railway up
+cd frontend && vercel --prod
+```
+
+### Deployment Resources
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| 🎯 Quick Deploy | 5-minute setup guide | [QUICK_DEPLOY.md](./QUICK_DEPLOY.md) |
+| 📖 Complete Guide | Detailed deployment instructions | [COMPLETE_DEPLOYMENT_GUIDE.md](./COMPLETE_DEPLOYMENT_GUIDE.md) |
+| 📊 Dashboard | Track deployment status | [DEPLOYMENT_DASHBOARD.md](./DEPLOYMENT_DASHBOARD.md) |
+| ✅ Completion | Final checklist | [DEPLOYMENT_COMPLETE.md](./DEPLOYMENT_COMPLETE.md) |
+
+### Deployment Scripts
+
+```bash
+# Deploy smart contracts
+npx hardhat run scripts/deploy-contracts.js --network base-sepolia
+
+# Configure Vercel environment variables
+./scripts/setup-vercel-env.sh
+
+# Run deployment tests
+node scripts/test-deployment.js
+```
+
+### Current Deployment Status
+
+- ✅ **Frontend**: Deployed on Vercel
+  - URL: https://kiromusic-eskbl55m8-mbdtf202-cybers-projects.vercel.app
+  - Status: Live
+  - Build: 949KB (gzip: 294KB)
+
+- ⏳ **Backend**: Ready to deploy
+  - Platforms: Railway / Render / Vercel
+  - Config files: `backend/railway.json`, `backend/render.yaml`
+
+- ⏳ **Smart Contracts**: Ready to deploy
+  - Networks: Base Sepolia (testnet) / Base (mainnet)
+  - Scripts: `scripts/deploy-contracts.js`
+
+### Environment Variables
+
+**Frontend (Vercel)**
+```env
+VITE_API_URL=https://your-backend-url.railway.app/api
+VITE_CHAIN_ID=84532
+VITE_NETWORK_NAME=base-sepolia
+VITE_IPFS_GATEWAY=https://gateway.pinata.cloud/ipfs/
+```
+
+**Backend (Railway/Render)**
+```env
+NODE_ENV=production
+PORT=3001
+OPENAI_API_KEY=your_key
+CORS_ORIGIN=https://kiromusic-eskbl55m8-mbdtf202-cybers-projects.vercel.app
+```
+
+**Smart Contracts (Local)**
+```env
+PRIVATE_KEY=your_private_key
+BASE_SEPOLIA_RPC_URL=https://sepolia.base.org
+BASESCAN_API_KEY=your_api_key
+```
+
+### Testing
+
+```bash
+# Run all tests
+npm test
+
+# Test smart contracts
+npx hardhat test
+
+# Test deployment
+node scripts/test-deployment.js
+```
+
+---
+
+## 📞 Support & Resources
+
+- **Documentation**: See `/docs` folder
+- **Deployment Help**: [COMPLETE_DEPLOYMENT_GUIDE.md](./COMPLETE_DEPLOYMENT_GUIDE.md)
+- **Troubleshooting**: Check deployment guide's troubleshooting section
+- **Base Sepolia Faucet**: https://www.coinbase.com/faucets/base-ethereum-sepolia-faucet
+
+---
+
+**Built with ❤️ using Kiro IDE**

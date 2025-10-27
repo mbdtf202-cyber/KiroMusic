@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./RoyaltyToken.sol";
@@ -26,7 +26,7 @@ contract RoyaltyVault is ReentrancyGuard, Ownable {
     address public treasury;
 
     event RoyaltyDeposited(address indexed rMusicToken, uint256 amount);
-    event RoyaltyClai med(address indexed rMusicToken, address indexed holder, uint256 amount);
+    event RoyaltyClaimed(address indexed rMusicToken, address indexed holder, uint256 amount);
     event RoyaltyDistributed(address indexed rMusicToken, uint256 amount);
 
     constructor(address _treasury) Ownable(msg.sender) {

@@ -19,7 +19,7 @@ function App() {
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider>
-          <Router>
+          <Router basename="/">
             <Layout>
               <Routes>
                 <Route path="/" element={<HomePage />} />
