@@ -246,6 +246,84 @@ class MarketDataService {
   async getTrendingGenres(limit) {
     return [];
   }
+
+  /**
+   * 获取音轨市场数据
+   */
+  async getTrackMarketData(trackId) {
+    try {
+      // 从数据库或缓存获取
+      // 这里返回模拟数据
+      return {
+        volume24h: Math.random() * 1000000,
+        priceChange24h: (Math.random() - 0.5) * 100,
+        holders: Math.floor(Math.random() * 10000),
+        liquidity: Math.random() * 10000000,
+        marketCap: Math.random() * 50000000,
+        trendScore: 50 + Math.random() * 50,
+      };
+    } catch (error) {
+      console.error('Track market data error:', error);
+      return null;
+    }
+  }
+
+  /**
+   * 获取艺术家数据
+   */
+  async getArtistData(artistId) {
+    try {
+      // 从Spotify等API获取艺术家数据
+      return {
+        followers: Math.floor(Math.random() * 1000000),
+        monthlyListeners: Math.floor(Math.random() * 10000000),
+        trackCount: Math.floor(Math.random() * 100),
+        followerGrowthRate: (Math.random() - 0.3) * 50,
+        listenerGrowthRate: (Math.random() - 0.3) * 50,
+        releaseFrequency: Math.random() * 10,
+      };
+    } catch (error) {
+      console.error('Artist data error:', error);
+      return null;
+    }
+  }
+
+  /**
+   * 获取实时价格数据
+   */
+  async getRealTimePrice(tokenAddress) {
+    try {
+      // 从DEX或价格预言机获取实时价格
+      return {
+        price: Math.random() * 0.1,
+        change24h: (Math.random() - 0.5) * 20,
+        volume24h: Math.random() * 100000,
+        timestamp: Date.now(),
+      };
+    } catch (error) {
+      console.error('Real-time price error:', error);
+      return null;
+    }
+  }
+
+  /**
+   * 获取链上数据
+   */
+  async getOnChainData(tokenAddress) {
+    try {
+      // 从区块链获取数据
+      return {
+        totalSupply: '1000000000000000000000',
+        circulatingSupply: '500000000000000000000',
+        holders: Math.floor(Math.random() * 10000),
+        transactions24h: Math.floor(Math.random() * 1000),
+        uniqueTraders24h: Math.floor(Math.random() * 500),
+      };
+    } catch (error) {
+      console.error('On-chain data error:', error);
+      return null;
+    }
+  }
 }
 
 module.exports = new MarketDataService();

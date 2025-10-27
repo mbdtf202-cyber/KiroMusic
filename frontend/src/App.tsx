@@ -11,6 +11,7 @@ import ArtistPage from './pages/ArtistPage';
 import InvestorPage from './pages/InvestorPage';
 import DAOPage from './pages/DAOPage';
 import ExplorePage from './pages/ExplorePage';
+import { AIAssistantPage } from './pages/AIAssistantPage';
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/investor" element={<InvestorPage />} />
                 <Route path="/dao" element={<DAOPage />} />
                 <Route path="/explore" element={<ExplorePage />} />
+                <Route path="/ai-assistant" element={<AIAssistantPage />} />
               </Routes>
             </Layout>
           </Router>

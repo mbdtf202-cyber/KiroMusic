@@ -12,6 +12,7 @@ const rateLimit = require('express-rate-limit');
 const aiRoutes = require('./routes/ai');
 const analyticsRoutes = require('./routes/analytics');
 const marketRoutes = require('./routes/market');
+const adminRoutes = require('./routes/admin');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -34,6 +35,7 @@ app.use('/api/', limiter);
 app.use('/api/ai', aiRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/market', marketRoutes);
+app.use('/api/admin', adminRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
@@ -49,10 +51,33 @@ app.use((err, req, res, next) => {
   });
 });
 
+// Initialize AI services
+const aiInitializer = require('./ai/initialize');
+
 // Start server
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`🚀 KiroMusic AI Backend running on port ${PORT}`);
   console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
+  
+  // Initialize AI services in background
+  try {
+    await aiInitializer.initialize();
+  } catch (error) {
+    console.error('⚠️  AI services initialization failed, but server is running');
+  }
+});
+
+// Graceful shutdown
+process.on('SIGTERM', async () => {
+  console.log('SIGTERM received, shutting down gracefully...');
+  await aiInitializer.shutdown();
+  process.exit(0);
+});
+
+process.on('SIGINT', async () => {
+  console.log('SIGINT received, shutting down gracefully...');
+  await aiInitializer.shutdown();
+  process.exit(0);
 });
 
 module.exports = app;
