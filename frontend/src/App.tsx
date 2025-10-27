@@ -12,6 +12,7 @@ import InvestorPage from './pages/InvestorPage';
 import DAOPage from './pages/DAOPage';
 import ExplorePage from './pages/ExplorePage';
 import { AIAssistantPage } from './pages/AIAssistantPage';
+import { DocsPage } from './pages/DocsPage';
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/dao" element={<DAOPage />} />
                 <Route path="/explore" element={<ExplorePage />} />
                 <Route path="/ai-assistant" element={<AIAssistantPage />} />
+                <Route path="/docs" element={<DocsPage />} />
               </Routes>
             </Layout>
           </Router>

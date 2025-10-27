@@ -17,6 +17,7 @@ export default function Layout({ children }: LayoutProps) {
     { path: '/artist', label: 'Artist', icon: Users },
     { path: '/investor', label: 'Investor', icon: TrendingUp },
     { path: '/dao', label: 'DAO', icon: Users },
+    { path: '/ai-assistant', label: 'AI Assistant', icon: Sparkles },
   ];
 
   return (
@@ -84,9 +85,9 @@ export default function Layout({ children }: LayoutProps) {
               © 2025 KiroMusic. Built with Kiro IDE. Powered by Ethereum.
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-cyber-blue transition-colors">Docs</a>
-              <a href="#" className="text-gray-400 hover:text-cyber-blue transition-colors">GitHub</a>
-              <a href="#" className="text-gray-400 hover:text-cyber-blue transition-colors">Discord</a>
+              <Link to="/docs" className="text-gray-400 hover:text-cyber-blue transition-colors">Docs</Link>
+              <a href="https://github.com/mbdtf202-cyber/KiroMusic" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-blue transition-colors">GitHub</a>
+              <a href="https://discord.gg/kiromusic" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyber-blue transition-colors">Discord</a>
             </div>
           </div>
         </div>
