@@ -1,73 +1,89 @@
 version: '3.8'
 
 services:
-  # 后端API服务
+  # Backend API Service
   backend:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kiromusic-backend
     ports:
       - "3001:3001"
     environment:
       - NODE_ENV=production
       - PORT=3001
-      - MONGODB_URI=${MONGODB_URI}
-      - REDIS_URL=${REDIS_URL}
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - SPOTIFY_CLIENT_ID=${SPOTIFY_CLIENT_ID}
-      - SPOTIFY_CLIENT_SECRET=${SPOTIFY_CLIENT_SECRET}
-      - YOUTUBE_API_KEY=${YOUTUBE_API_KEY}
-      - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN}
-      - JWT_SECRET=${JWT_SECRET}
-    depends_on:
-      - redis
-      - mongodb
-    restart: unless-stopped
-    networks:
-      - kiromusic-network
-
-  # Redis缓存
-  redis:
-    image: redis:7-alpine
-    ports:
-      - "6379:6379"
+      - CORS_ORIGIN=http://localhost:3000
+    env_file:
+      - .env
     volumes:
-      - redis-data:/data
+      - ./backend/src:/app/backend/src
+      - backend_node_modules:/app/backend/node_modules
     restart: unless-stopped
     networks:
       - kiromusic-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
-  # MongoDB数据库
+  # Frontend (for development)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    container_name: kiromusic-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:3001/api
+      - VITE_CHAIN_ID=84532
+      - VITE_NETWORK_NAME=base-sepolia
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+      - frontend_node_modules:/app/node_modules
+    restart: unless-stopped
+    networks:
+      - kiromusic-network
+    depends_on:
+      - backend
+
+  # MongoDB (optional, for future use)
   mongodb:
-    image: mongo:6
+    image: mongo:7
+    container_name: kiromusic-mongodb
     ports:
       - "27017:27017"
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME}
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
       - MONGO_INITDB_DATABASE=kiromusic
     volumes:
-      - mongodb-data:/data/db
+      - mongodb_data:/data/db
     restart: unless-stopped
     networks:
       - kiromusic-network
 
-  # Nginx反向代理
-  nginx:
-    image: nginx:alpine
+  # Redis (optional, for caching)
+  redis:
+    image: redis:7-alpine
+    container_name: kiromusic-redis
     ports:
-      - "80:80"
-      - "443:443"
+      - "6379:6379"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./ssl:/etc/nginx/ssl
-    depends_on:
-      - backend
+      - redis_data:/data
     restart: unless-stopped
     networks:
       - kiromusic-network
+    command: redis-server --appendonly yes
 
 volumes:
-  redis-data:
-  mongodb-data:
+  backend_node_modules:
+  frontend_node_modules:
+  mongodb_data:
+  redis_data:
 
 networks:
   kiromusic-network:

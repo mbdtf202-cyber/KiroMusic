@@ -211,13 +211,34 @@ KiroMusic/
 - ⏳ **Smart Contracts**: Ready to deploy
 - ⏳ **Backend**: Ready to deploy
 
-### Deploy Now
+### Deployment Options
+
+#### Option 1: Quick Deploy (Recommended)
 
 ```bash
-# Quick deployment
+# Configure and deploy everything
+./setup-env.sh
 ./complete-setup.sh
+```
 
-# Or step by step
+#### Option 2: Docker Deployment 🐳
+
+```bash
+# Build and run with Docker Compose
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Access at http://localhost:3000
+```
+
+See [DOCKER_DEPLOYMENT.md](./DOCKER_DEPLOYMENT.md) for details.
+
+#### Option 3: Manual Deploy
+
+```bash
+# Deploy contracts
 ./setup-env.sh              # Configure environment
 npx hardhat compile         # Compile contracts
 npx hardhat run scripts/deploy-contracts.js --network base-sepolia
