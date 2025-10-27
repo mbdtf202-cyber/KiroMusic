@@ -10,11 +10,12 @@ Frontend: React + TypeScript (strict TS), smart contracts: Solidity on Ethereum.
 
 ## 🚀 Quick Links
 
-- **Live App**: [kiromusic.vercel.app](https://kiromusic-9x788p0gb-mbdtf202-cybers-projects.vercel.app)
+- **🌐 Live App**: [kiromusic.vercel.app](https://kiromusic-9x788p0gb-mbdtf202-cybers-projects.vercel.app)
+- **� DGitHub**: [github.com/mbdtf202-cyber/KiroMusic](https://github.com/mbdtf202-cyber/KiroMusic)
 - **📚 Documentation**: [DOCS_INDEX.md](./DOCS_INDEX.md) - 完整文档索引
-- **Quick Start**: [3-Step Setup](./docs/deployment/QUICK_START.md) ⭐
-- **Troubleshooting**: [Fix Common Issues](./docs/troubleshooting/)
-- **Next Steps**: [NEXT_STEPS.md](./NEXT_STEPS.md)
+- **⚡ Quick Start**: [3-Step Setup](./docs/deployment/QUICK_START.md) ⭐
+- **🔧 Troubleshooting**: [Fix Common Issues](./docs/troubleshooting/)
+- **🎯 Next Steps**: [NEXT_STEPS.md](./NEXT_STEPS.md)
 
 ## ⚡ Quick Start (2 Steps - 15 Minutes)
 
